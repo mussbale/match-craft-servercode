@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: match-craft-servercode
-          path: '${{ github.workspace }}/target/*.jar'
+          path: '${{ github.workspace }}/target/*.war'
 
   deploy:
     runs-on: windows-latest
@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'match-craft-dota2'
           slot-name: 'Production'
-          package: '*.jar'
+          package: '*.war'
           
